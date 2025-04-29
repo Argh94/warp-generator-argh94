@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WARP Generator Argh94</title>
+  <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <button class="language-switch" onclick="toggleLanguage()" aria-label="تغییر به انگلیسی">EN</button>
+      <button class="toggle-theme" onclick="toggleTheme()" aria-label="تغییر به تم روشن">
+        <i class="material-icons">brightness_medium</i>
+      </button>
+      <h2>WARP Generator Argh94</h2>
+    </div>
+    <div class="info-box">
+      <p>اگر با نحوه ساخت و تولید URL آشنایی ندارید، می‌توانید از لینک اشتراک زیر در اپلیکیشن‌های Hiddify و Karing استفاده کنید:</p>
+      <input type="text" id="subscriptionLink" value="https://raw.githubusercontent.com/Argh94/warp-generator-argh94/main/config.txt#Argh94" readonly class="form-control">
+      <button class="copy-btn" onclick="copySubscriptionLink()">
+        <i class="material-icons">content_copy</i> کپی لینک
+      </button>
+    </div>
+    <div class="cdn-cgi-trace-container">
+      <a href="https://cloudflare.com/cdn-cgi/trace" class="cdn-cgi-trace-button" target="_blank">CDN-CGI Trace</a>
+      <a href="https://4n0nymou3.github.io/Json/Generator" class="cdn-cgi-trace-button" target="_blank">Json Generator</a>
+    </div>
+    <div class="line"><br></div>
+    <form id="warpinatorForm">
+      <div class="input-field" id="usernameField" style="display: none;">
+        <label for="username">نام دلخواه (اختیاری) فقط حروف لاتین و عدد</label>
+        <input id="username" type="text" name="Name Config" class="form-control">
+      </div>
+      <div class="input-field">
+        <label for="license">کد لایسنس WARP (اختیاری)</label>
+        <input id="license" type="text" name="license" class="form-control">
+        <div class="tooltip">
+          <i class="material-icons">info</i>
+          <span class="tooltiptext">در صورت تمایل، می‌توانید با وارد کردن کلید مجوز، به ویژگی‌های خاص و پیشرفته دسترسی پیدا کنید</span>
+        </div>
+      </div>
+      <div class="input-field">
+        <label for="type">نوع هسته پیکربندی</label>
+        <select id="type" name="type" class="form-control" onchange="toggleHiddifyOptions()">
+          <option value="hiddify">Hiddify</option>
+          <option value="karing">Karing</option>
+          <option value="v2rayng">v2rayNG</option>
+          <option value="singbox">Singbox</option>
+          <option value="shadowrocket">Shadowrocket</option>
+          <option value="streisand">Streisand</option>
+          <option value="wireguard">Wireguard</option>
+        </select>
+      </div>
+      <div id="hiddifyOptions" style="display: block;">
+        <div class="input-field">
+          <label for="ipVersion">نسخه IP</label>
+          <select id="ipVersion" name="ipVersion" class="form-control" onchange="toggleIPOptions()">
+            <option value="ipv4">IPv4</option>
+            <option value="ipv6">IPv6</option>
+          </select>
+        </div>
+        <div class="hiddify-options">
+          <div class="select-item">
+            <label for="type1">تعداد بسته‌های نویز</label>
+            <select id="type1" name="ifp" class="form-control">
+              <option value="50-100" selected>50-100</option>
+              <option value="10-20">10-20</option>
+              <option value="20-30">20-30</option>
+              <option value="30-40">30-40</option>
+              <option value="40-50">40-50</option>
+              <option value="50-60">50-60</option>
+              <option value="60-70">60-70</option>
+              <option value="70-80">70-80</option>
+              <option value="80-90">80-90</option>
+              <option value="90-100">90-100</option>
+              <option value="20-40">20-40</option>
+              <option value="30-60">30-60</option>
+              <option value="40-80">40-80</option>
+              <option value="40-100">40-100</option>
+              <option value="50-100">50-100</option>
+              <option value="60-100">60-100</option>
+              <option value="100-150">100-150</option>
+              <option value="120-160">120-160</option>
+              <option value="150-200">150-200</option>
+            </select>
+          </div>
+          <div class="select-item">
+            <label for="type2">اندازه بسته‌های نویز</label>
+            <select id="type2" name="ifps" class="form-control">
+              <option value="50-100" selected>50-100</option>
+              <option value="10-20">10-20</option>
+              <option value="20-30">20-30</option>
+              <option value="30-40">30-40</option>
+              <option value="40-50">40-50</option>
+              <option value="50-60">50-60</option>
+              <option value="60-70">60-70</option>
+              <option value="70-80">70-80</option>
+              <option value="80-90">80-90</option>
+              <option value="90-100">90-100</option>
+              <option value="20-40">20-40</option>
+              <option value="30-60">30-60</option>
+              <option value="40-80">40-80</option>
+              <option value="40-100">40-100</option>
+              <option value="50-100">50-100</option>
+              <option value="60-100">60-100</option>
+              <option value="100-150">100-150</option>
+              <option value="120-160">120-160</option>
+              <option value="150-200">150-200</option>
+            </select>
+          </div>
+          <div class="select-item">
+            <label for="type3">تأخیر ارسال بسته‌های نویز</label>
+            <select id="type3" name="ifpd" class="form-control">
+              <option value="3-6" selected>3-6</option>
+              <option value="1-2">1-2</option>
+              <option value="2-3">2-3</option>
+              <option value="3-4">3-4</option>
+              <option value="4-5">4-5</option>
+              <option value="5-6">5-6</option>
+              <option value="6-7">6-7</option>
+              <option value="7-8">7-8</option>
+              <option value="8-9">8-9</option>
+              <option value="9-10">9-10</option>
+              <option value="2-4">2-4</option>
+              <option value="3-6">3-6</option>
+              <option value="4-8">4-8</option>
+              <option value="4-10">4-10</option>
+              <option value="5-10">5-10</option>
+              <option value="6-10">6-10</option>
+              <option value="1-5">1-5</option>
+              <option value="2-6">2-6</option>
+              <option value="5-7">5-7</option>
+            </select>
+          </div>
+          <div class="select-item">
+            <label for="type4">حالت تولید نویز</label>
+            <select id="type4" name="ifpm" class="form-control">
+              <option value="m4" selected>m4</option>
+              <option value="m1">m1</option>
+              <option value="m2">m2</option>
+              <option value="m3">m3</option>
+              <option value="m4">m4</option>
+              <option value="m5">m5</option>
+              <option value="m6">m6</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="input-field">
+        <label for="ip">آدرس IP (اختیاری)</label>
+        <input id="ip" type="text" name="ip" value="162.159.192.76" class="form-control">
+      </div>
+      <div class="input-field" id="portField">
+        <label for="port">آدرس PORT (اختیاری)</label>
+        <input id="port" type="number" name="port" value="2408" class="form-control">
+      </div>
+      <div id="autoFillContainer">
+        <label for="autoFillCheckbox">⁮⁮ ⁮⁮ پر کردن خودکار ⁮⁮ </label>
+        <input type="checkbox" id="autoFillCheckbox" onchange="toggleAutoFill()">
+      </div>
+      <div id="warpInWarpContainer">
+        <label for="warpInWarpToggle">قابلیت وارپ در وارپ</label>
+        <label class="switch">
+          <input type="checkbox" id="warpInWarpToggle">
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="line"><br></div>
+      <button class="btn" type="submit">
+        <i class="material-icons">send</i> ساخت کانفیگ
+      </button>
+    </form>
+    <div class="loading">
+      <div class="loading-spinner"></div>
+      <p>در حال تولید URL...</p>
+    </div>
+    <div class="card-panel" id="result">
+      <div class="qr-code-container" id="qrCodeContainer"></div>
+      <h5>URL تولید شده:</h5>
+      <div class="input-field">
+        <input id="generatedUrl" type="text" readonly class="form-control">
+      </div>
+      <button class="btn" onclick="copyToClipboard()">
+        <i class="material-icons">content_copy</i> کپی URL
+      </button>
+    </div>
+    <div class="contact-section">
+      <h3 class="contact-title">
+        <i class="material-icons">contact_mail</i> ارتباط با من
+      </h3>
+      <div class="footer-info">
+        <p>طراحی شده توسط: <a href="https://github.com/Argh94" target="_blank">Argh94</a></p>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+            </html>
