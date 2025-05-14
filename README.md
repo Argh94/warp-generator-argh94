@@ -1,12 +1,13 @@
 # WARP Generator Argh94
 
+![Visitor Count](https://komarev.com/ghpvc/?username=Argh94&repo=warp-generator-argh94&label=ProfileViews)
 <p align="center">
   <img src="https://img.shields.io/badge/version-2.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/username/WARP-Generator/blob/main/LICENSE" target="_blank">
     <img alt="License: GPL-3.0" src="https://img.shields.io/badge/License-GPL--3.0-yellow.svg" />
   </a>
 </p>
-![Visitor Count](https://komarev.com/ghpvc/?username=Argh94&repo=warp-generator-argh94&label=ProfileViews)
+
 
 > یک ابزار ساده و کارآمد برای تولید کانفیگ‌های WARP با تنظیمات سفارشی نویز و قابلیت WARP در WARP برای امنیت بیشتر
 
