@@ -8,7 +8,7 @@
   </a>
 </p>
 
-![عکس محیط برنامه](https://github.com/Argh94/warp-generator-argh94/blob/main/40.jpg)
+<div style="display: flex; justify-content: center; gap: 20px;"> <img src="https://raw.githubusercontent.com/Argh94/PersianTextEditor/main/images/project-preview.jpg" alt="نمایی از پروژه ۱" width="45%"> <img src="https://raw.githubusercontent.com/Argh94/PersianTextEditor/main/images/project-preview2.jpg" alt="نمایی از پروژه ۲" width="45%"> </div>
 
 
 > یک ابزار ساده و کارآمد برای تولید کانفیگ‌های WARP با تنظیمات سفارشی نویز و قابلیت WARP در WARP برای امنیت بیشتر
